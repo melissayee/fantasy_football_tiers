@@ -1,0 +1,17 @@
+{% extends 'tiers/base.html' %}
+
+{% block title %}
+    View Team
+{% endblock %}
+
+{% block content %}
+    <h2>Team Name: {{ team_name }}</h2>
+    {% for key, value in roster.items %}
+    <p>
+        {% for key,value in value.items %}
+            {{ key }}: {{ value }} <br>
+        {% endfor %}
+    </p>
+    {% endfor %}
+
+{% endblock %}

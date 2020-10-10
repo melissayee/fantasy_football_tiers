@@ -1,0 +1,16 @@
+{% extends 'tiers/base.html' %}
+
+{% block title %}
+    All Players
+{% endblock %}
+
+{% block content %}
+    {% for key, value in players.items %}
+    <p>
+        {% for key,value in value.items %}
+            {{ key }}: {{ value }} <br>
+        {% endfor %}
+    </p>
+    {% endfor %}
+
+{% endblock %}
