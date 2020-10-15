@@ -6,12 +6,28 @@
 
 {% block content %}
     <h2>Team Name: {{ team_name }}</h2>
-    {% for key, value in roster.items %}
-    <p>
-        {% for key,value in value.items %}
-            {{ key }}: {{ value }} <br>
+
+    <table border = 1px cellpadding="5px">
+        <tr>
+            <th colspan="3" style="text-align:center">Roster
+            </th>
+        </tr>
+
+        <tr>
+            <td style="text-align:center"><b>Slot</b></td>
+            <td style="text-align:center"><b>Player</b></td>
+            <td style="text-align:center"><b>Tier</b></td>
+        </tr>
+
+        {% for key, value in roster.items %}
+        <tr>
+            <td>{{ value.lineup_slot }}</td>
+            <td>{{ value.name }}</td>
+            <td>{{ value.tier }}</td>
+        </tr>
         {% endfor %}
-    </p>
-    {% endfor %}
+
+    </table>
+
 
 {% endblock %}
