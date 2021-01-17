@@ -7,6 +7,8 @@ lineup_dict = {0: 'QB',
                4: 'WR',
                5: 'WR/TE',
                6: 'TE',
+               7: 'OP',  # Punter
+               9: 'DE',
                16: 'D/ST',
                17: 'K',
                20: 'Bench',

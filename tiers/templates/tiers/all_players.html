@@ -6,11 +6,35 @@
 
 {% block content %}
     {% for key, value in players.items %}
-    <p>
-        {% for key,value in value.items %}
-            {{ key }}: {{ value }} <br>
-        {% endfor %}
-    </p>
+        <p>
+        <h2> {{ key }}</h2>
+
+        <table border="1" cellpadding="5px">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Position</th>
+                <th>Team</th>
+                <th>Tier</th>
+            </tr>
+
+            {% for player_id in value %}
+                <tr>
+                {% for key, value in player_id.items %}
+
+                    {% if key == 'tier' %}
+                        <td>Tier {{ value }}</td>
+                    {% else %}
+                        <td>{{ value }}</td>
+                    {% endif %}
+
+                {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+        </p>
+
     {% endfor %}
 
 {% endblock %}
