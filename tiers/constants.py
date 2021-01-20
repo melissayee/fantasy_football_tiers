@@ -1,5 +1,7 @@
 tier_url = 'https://s3-us-west-1.amazonaws.com/fftiers/out/text_{p}{s}.txt'
 
+season = 2020
+
 lineup_dict = {0: 'QB',
                1: 'TQB',
                2: 'RB',

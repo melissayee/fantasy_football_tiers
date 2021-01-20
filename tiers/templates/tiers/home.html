@@ -1,0 +1,23 @@
+{% extends 'tiers/base.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    <h1>Home</h1>
+    <p>
+        <ol>
+            <li>Go to your ESPN fantasy football team's home page
+            <li>Enter the URL below
+            <li>Select the type of scoring your league uses
+        </ol>
+    </p>
+
+    <form action="/" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}

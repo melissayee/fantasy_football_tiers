@@ -5,9 +5,15 @@
 {% endblock %}
 
 {% block content %}
-    <h2>Tiers</h2>
-    {% for key, value in tiers.items %}
-        {{ key }}: {{ value }} <br>
+    <h2>Tiers - {{ scoring }}</h2>
+    {% for position, tier_list in tiers.items %}
+        <h3>{{ position }}</h3>
+        {% for tier_level in tier_list %}
+            {% for tier, players in tier_level.items %}
+                {{ tier }}: {{ players }}
+            {% endfor %}
+        <br>
+        {% endfor %}
     {% endfor %}
 
 {% endblock %}
